@@ -7,11 +7,11 @@
     "url": "http://github.com/urish/angular-load.git"
   },
   "dependencies": {
-    "angular": ">=1.0.0 <1.6.0",
-    "angular-mocks": ">=1.0.0 <1.6.0"
+    "angular": ">=1.0.0 <1.6.0"
   },
   "files": ["dist"],
   "devDependencies": {
+    "angular-mocks": ">=1.0.0 <1.6.0",
     "babel-core": "^6.24.0",
     "babel-jest": "^19.0.0",
     "babel-loader": "^6.4.1",
@@ -33,6 +33,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "prepublish": "npm test && npm run build",
     "test": "./node_modules/.bin/jest",
     "build": "rm -rf dist && ./node_modules/.bin/webpack && ./node_modules/.bin/webpack --env.prod"
   }
