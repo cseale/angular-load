@@ -33,6 +33,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "prepublish": "npm test && npm run build",
     "test": "./node_modules/.bin/jest",
     "build": "rm -rf dist && ./node_modules/.bin/webpack && ./node_modules/.bin/webpack --env.prod"
   }
