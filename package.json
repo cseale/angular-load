@@ -1,6 +1,6 @@
 {
   "name": "angular-load",
-  "main": "angular-load.js",
+  "main": "./dist/angular-load.js",
   "version": "0.4.1",
   "repository": {
     "type": "git",
@@ -10,6 +10,7 @@
     "angular": ">=1.0.0 <1.6.0",
     "angular-mocks": ">=1.0.0 <1.6.0"
   },
+  "files": ["dist"],
   "devDependencies": {
     "babel-core": "^6.24.0",
     "babel-jest": "^19.0.0",
@@ -33,6 +34,6 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/jest",
-    "build": "./node_modules/.bin/webpack"
+    "build": "rm -rf dist && ./node_modules/.bin/webpack && ./node_modules/.bin/webpack --env.prod"
   }
 }
